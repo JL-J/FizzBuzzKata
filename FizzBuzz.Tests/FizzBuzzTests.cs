@@ -40,5 +40,13 @@ namespace FizzBuzz.Tests
             Assert.AreEqual("Buzz", output);
         }
 
+        [TestMethod]
+        public void FizzBuzz_WhenDisableBy15_ReturnsFizzBuzz()
+        {
+            int input = 15;
+            string output = FizzBuzz.GetValue(input);
+            Assert.AreEqual("FizzBuzz", output); 
+        }
+
     }
 }
