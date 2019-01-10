@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public static string GetValue(int input)
         {
-            return "1";
+            return input.ToString();
         }
     }
 }
