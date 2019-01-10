@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FizzBuzz; 
+using System;
 
 namespace FizzBuzzKata
 {
@@ -12,7 +9,7 @@ namespace FizzBuzzKata
         {
             for (int i = 1; i <= 100; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(FizzBuzzer.GetValue(i));
             }
             Console.ReadLine();
         }

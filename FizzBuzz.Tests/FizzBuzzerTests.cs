@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace FizzBuzz.Tests
 {
     [TestClass]
-    public class FizzBuzzTests
+    public class FizzBuzzerTests
     {
         [TestMethod]
          [DataRow(1,"1")]
@@ -14,7 +14,7 @@ namespace FizzBuzz.Tests
          [DataRow(88, "88")]
         public void FizzBuzz_WhenNotDivisable_ReturnsInput(int input, string expected)
         {
-            string actual = FizzBuzz.GetValue(input);
+            string actual = FizzBuzzer.GetValue(input);
             Assert.AreEqual(expected, actual);      
         }
 
@@ -25,7 +25,7 @@ namespace FizzBuzz.Tests
          [DataRow(27)]
         public void FizzBuzz_WhenDivisableBy3_ReturnsFizz(int input)
         {
-            string output = FizzBuzz.GetValue(input);
+            string output = FizzBuzzer.GetValue(input);
             Assert.AreEqual("Fizz", output);
         }
 
@@ -36,7 +36,7 @@ namespace FizzBuzz.Tests
          [DataRow(100)]
         public void FizzBuzz_WhenDivisableBy5_ReturnsBuzz(int input)
         {
-            string output = FizzBuzz.GetValue(input);
+            string output = FizzBuzzer.GetValue(input);
             Assert.AreEqual("Buzz", output);
         }
 
@@ -47,7 +47,7 @@ namespace FizzBuzz.Tests
          [DataRow(75)]
         public void FizzBuzz_WhenDisableBy15_ReturnsFizzBuzz(int input)
         {
-            string output = FizzBuzz.GetValue(input);
+            string output = FizzBuzzer.GetValue(input);
             Assert.AreEqual("FizzBuzz", output); 
         }
 

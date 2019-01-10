@@ -2,7 +2,7 @@
 
 namespace FizzBuzz
 {
-    public class FizzBuzz
+    public class FizzBuzzer
     {
         public static string GetValue(int input)
         {
