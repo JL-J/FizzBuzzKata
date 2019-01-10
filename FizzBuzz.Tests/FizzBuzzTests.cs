@@ -11,7 +11,7 @@ namespace FizzBuzz.Tests
         {
             int input = 1;
             string output = FizzBuzz.GetValue(input);
-            Assert.AreEqual(output, "1");      
+            Assert.AreEqual("1", output);      
         }
     }
 }
