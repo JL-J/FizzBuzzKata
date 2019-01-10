@@ -7,51 +7,38 @@ namespace FizzBuzz.Tests
     public class FizzBuzzTests
     {
         [TestMethod]
-        public void FizzBuzz_When1_Returns1()
+         [DataRow(1,"1")]
+         [DataRow(2, "2")]
+         [DataRow(14, "14")]
+         [DataRow(37, "37")]
+         [DataRow(88, "88")]
+        public void FizzBuzz_WhenNotDivisable_ReturnsInput(int input, string expected)
         {
-            int input = 1;
-            string output = FizzBuzz.GetValue(input);
-            Assert.AreEqual("1", output);      
+            string actual = FizzBuzz.GetValue(input);
+            Assert.AreEqual(expected, actual);      
         }
 
         [TestMethod]
-        public void FizzBuzz_When2_Returns2()
+         [DataRow(3)]
+         [DataRow(6)]
+         [DataRow(12)]
+         [DataRow(27)]
+        public void FizzBuzz_WhenDivisableBy3_ReturnsFizz(int input)
         {
-            int input = 2;
-            string output = FizzBuzz.GetValue(input);
-            Assert.AreEqual("2", output);
-        }
-
-        [TestMethod]
-        public void FizzBuzz_When3_ReturnsFizz()
-        {
-            int input = 3;
             string output = FizzBuzz.GetValue(input);
             Assert.AreEqual("Fizz", output);
         }
 
         [TestMethod]
-        public void FizzBuzz_When6_ReturnsFizz()
+         [DataRow(5)]
+         [DataRow(10)]
+         [DataRow(50)]
+         [DataRow(100)]
+        public void FizzBuzz_WhenDivisableBy5_ReturnsBuzz(int input)
         {
-            int input = 6;
-            string output = FizzBuzz.GetValue(input);
-            Assert.AreEqual("Fizz", output);
-        }
-
-        [TestMethod]
-        public void FizzBuzz_When5_ReturnsBuzz()
-        {
-            int input = 5;
             string output = FizzBuzz.GetValue(input);
             Assert.AreEqual("Buzz", output);
         }
 
-        [TestMethod]
-        public void FizzBuzz_When10_ReturnsBuzz()
-        {
-            int input = 10;
-            string output = FizzBuzz.GetValue(input);
-            Assert.AreEqual("Buzz", output);
-        }
     }
 }
