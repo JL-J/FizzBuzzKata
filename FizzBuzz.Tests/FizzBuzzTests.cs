@@ -41,9 +41,12 @@ namespace FizzBuzz.Tests
         }
 
         [TestMethod]
-        public void FizzBuzz_WhenDisableBy15_ReturnsFizzBuzz()
+         [DataRow(15)]
+         [DataRow(30)]
+         [DataRow(60)]
+         [DataRow(75)]
+        public void FizzBuzz_WhenDisableBy15_ReturnsFizzBuzz(int input)
         {
-            int input = 15;
             string output = FizzBuzz.GetValue(input);
             Assert.AreEqual("FizzBuzz", output); 
         }
