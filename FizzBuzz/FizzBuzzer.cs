@@ -6,19 +6,19 @@ namespace FizzBuzz
     {
         public static string GetValue(int input)
         {
-            if (IsDivisableBy(15))
+            if (IsDivisableBy(15, input))
                 return "FizzBuzz";
-            else if (IsDivisableBy(3))
-               return "Fizz";
-            else if (IsDivisableBy(5))
+            else if (IsDivisableBy(3, input))
+                return "Fizz";
+            else if (IsDivisableBy(5, input))
                 return "Buzz";
-            else 
+            else
                 return input.ToString();
+        }
 
-            bool IsDivisableBy(int divisor)
-            {
-               return (input % divisor) == 0;   
-            }
+        static bool IsDivisableBy(int divisor, int input)
+        {
+            return (input % divisor) == 0;   
         }
     }
 }
